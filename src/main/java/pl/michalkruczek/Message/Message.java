@@ -1,7 +1,6 @@
 package pl.michalkruczek.Message;
 
-import pl.michalkruczek.Message.enums.Colors;
-import pl.michalkruczek.Message.enums.Styles;
+
 
 import javax.persistence.*;
 import java.util.Date;
@@ -17,23 +16,15 @@ public class Message {
     @GeneratedValue
     private Long id;
     @Column
-    private Date postDate;
+    private String postDate;
     @Column
     private String msg;
     @Column
-    private Colors color;
+    private String color;
     @Column
-    private Styles style;
+    private String style;
     @Column
     private String nick;
-
-    public String getNick() {
-        return nick;
-    }
-
-    public void setNick(String nick) {
-        this.nick = nick;
-    }
 
     public Long getId() {
         return id;
@@ -43,11 +34,11 @@ public class Message {
         this.id = id;
     }
 
-    public Date getPostDate() {
+    public String getPostDate() {
         return postDate;
     }
 
-    public void setPostDate(Date postDate) {
+    public void setPostDate(String postDate) {
         this.postDate = postDate;
     }
 
@@ -59,19 +50,27 @@ public class Message {
         this.msg = msg;
     }
 
-    public Colors getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(Colors color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
-    public Styles getStyle() {
+    public String getStyle() {
         return style;
     }
 
-    public void setStyle(Styles style) {
+    public void setStyle(String style) {
         this.style = style;
+    }
+
+    public String getNick() {
+        return nick;
+    }
+
+    public void setNick(String nick) {
+        this.nick = nick;
     }
 }
