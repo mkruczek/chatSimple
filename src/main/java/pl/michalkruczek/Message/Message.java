@@ -24,6 +24,16 @@ public class Message {
     private Colors color;
     @Column
     private Styles style;
+    @Column
+    private String nick;
+
+    public String getNick() {
+        return nick;
+    }
+
+    public void setNick(String nick) {
+        this.nick = nick;
+    }
 
     public Long getId() {
         return id;
